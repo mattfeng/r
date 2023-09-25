@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\newcommand{\pH}{\text{pH}}
+\newcommand{\pKa}{\text{p}{K_a}}
+\newcommand{\conc}[1]{\left[#1\right]}
+
+\title{Protonation states}
+\author{Matthew Feng}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The Henderson-Hasselbalch equation states that
+
+$$
+\pH = \pKa + \log_{10} \frac{\conc{\text{base}}}{\conc{\text{acid}}}.
+$$
+
+By rearranging terms, we can write the Henderson-Hasselbalch equation as
+
+$$
+\frac{\conc{\text{base}}}{\conc{\text{acid}}} = 10^{\pH - \pKa}.
+$$
+
+In this form, we can see that when the $\pH$ of the surroundings is greater than $\pKa$, more base is present. In other words, the {\bf deprotonated form dominates when the acid is more acidic than its surroundings}. Furthermore, for every increase in the difference $\pH - \pKa$, the dominance of the deprotonated form increases ten-fold.
+
+\end{document}
