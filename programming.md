@@ -48,6 +48,15 @@ docker buildx build --platform linux/arm64/v8 --load -t IMAGE_NAME:arm64 ..
 
 # build Docker image for Linux
 docker buildx build --platform linux/amd64 --load -t IMAGE_NAME ..
+
+# send Docker image to another computer
+docker save IMAGE_NAME | gzip | pv | ssh user@host docker load
+
+# save Docker image
+docker save IMAGE_NAME | pv | gzip > OUTPUT.tar.gz
+
+# commit Docker container to image
+docker commit -m "MESSAGE" CONTAINER IMAGE_NAME:TAG
 ```
 
 ## SSH
